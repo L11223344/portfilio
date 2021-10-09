@@ -1,0 +1,51 @@
+
+/* the style for the navbaaar and other page lives here */
+body{
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+}
+.navbar_content_head{
+    display: flex;
+    width: 45%;
+    font-size: 19px;
+    list-style: none;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.navbar_content_image{
+    height: 71px;
+    cursor: pointer;
+    width: 69px;
+    border-radius: 31px;
+    box-shadow: 1px -1px 3px;
+}
+.heading{
+    margin-bottom: 2rem;
+    font-size: 53px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.home_para{
+    margin-bottom: 65px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    word-spacing: 0.3px;
+    text-align: justify;
+}
+.home_slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 68px);
+    background-color: white;
+}
+.image_round img{
+    border-radius: 50%;
+
+}

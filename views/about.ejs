@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./partials/header.ejs') %>
+
+  <body>
+    <%- include('./partials/nav.ejs') %>
+
+      <div>
+
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <h1 style="text-align: center ;margin-top: 35px;;">About Me</h1>
+          <div class="col-md-12"
+            style="display: flex;justify-content: space-between;align-items: center;margin-top: 40px;padding: 1rem 2rem;background-color: #fff">
+           
+            <div class="col-md-6">
+              <p style="letter-spacing: 12px;letter-spacing: 12px;margin: 3px;">
+                <%=para%>
+              </p>
+              <h1 style="font-size: 64px;margin-bottom: 35px;font-family: auto;">
+                Web Developer
+              </h1>
+              <p>
+                <%=desc%>
+              </p>
+              <a href="/contact">
+                <button type="button" class="btn btn-success" style=" padding: 1rem 2rem;;margin-top: 20px;">Contact
+                  Us</button>                 
+              </a>
+              <a   href='/resume/resume.pdf' target="_blank">
+                <button type="button" class="btn btn-success" style=" padding: 1rem 2rem;;margin-top: 20px;">My Resume</button>
+              </a>
+            </div>
+            <div class="col-md-4">
+
+              <img src="/images/person.jpg" class="card-img-top" alt="...">
+              <h3 style="text-align: center;margin-top: 39px;">
+                <%=name%>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+
+</html>
