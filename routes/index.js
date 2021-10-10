@@ -23,7 +23,7 @@ router.post('/test', (req, res) => {
 })
 // route for the about page
 router.get('/about', function (req, res, next) {
-  res.render('about',{title:"About Me",para:"WHO YOU ARE!",desc:"Lewis M is a WordPress developer and designer whose portfolio emphasizes her focus on customized, responsive website designs.I build beautiful layouts in using html bootstrap and good use of backend knoledge using node js",name:"Lewis M"});
+  res.render('about',{title:"About Me",para:"WHO YOU ARE!",desc:"Iam a WordPress developer and designer whose portfolio emphasizes her focus on customized, responsive website designs.I build beautiful layouts in using html bootstrap and good use of backend knoledge using node js",name:"Lewis M"});
 });
 
 // route for the project page
