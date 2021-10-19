@@ -1,0 +1,14 @@
+.table_slider{
+    max-width: 1040px;
+    margin: auto;
+    margin-top: 82px;
+    background-color: white;
+    box-shadow: -1px -1px 0px 0px;
+    
+}
+.table_slider_heading{
+    font-size: 38px;
+    font-family: emoji;
+    text-align: center;
+    margin-top: 49px;
+}
