@@ -1,0 +1,77 @@
+.login_slider{
+    max-width: 1200px;
+    margin: auto;
+    height: 500px;
+    margin-top: 47px;
+    border-radius: 12px;
+
+}
+.form_slider{
+    max-width: 339px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid #e3e3e3;
+    padding: 4rem 3rem;
+    background-color: white;
+    box-shadow: 0px 0px 1px 0px;
+}
+input {
+    margin-bottom: 12px;
+
+}
+#form_button{
+    width: 100%;
+    margin-top: 25px;
+}
+label{
+  
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.logins_slider_heading{
+    text-align: center;
+    margin-top: 39px;
+    margin-bottom: 19px;
+    letter-spacing: 3px;
+    font-size: 37px;
+    font-family: emoji;
+}
+.login_slider_heading{
+    text-align: center;
+    margin-top: 68px;
+    margin-bottom: 19px;
+    font-size: 37px;
+    font-family: emoji;
+}
+.logins_slider{
+    max-width: 1200px;
+    margin: auto;
+    height: 623px;
+    margin-top: 47px;
+    border-radius: 12px
+}
+.forms_slider{
+    max-width: 339px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid #e3e3e3;
+    padding: 2rem 3rem;
+    border-radius: 9px;
+    background-color: white;
+    padding-bottom: 47px;
+    box-shadow: 0px 0px 1px 0px;
+}
+
+
+td  
+{
+    height: 50px; 
+    width: 50px;
+}
+
+table td  
+{
+    text-align: center; 
+    vertical-align: middle;
+}

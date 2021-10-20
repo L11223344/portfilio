@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/header.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <h2 class="table_slider_heading">Wellcome to Bussiness Contact View List</h2>
+            <div class="table_slider">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Contact Name</th>
+                            <th scope="col">Contact Number</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        <% contacts.forEach((user)=>{ %>
+                            <tr>
+
+                                <td>
+                                    <%= user.contactName%>
+                                </td>
+                                <td>
+                                    <%=user.contactNumber%>
+                                </td>
+                                <td>
+                                    <%=user.emailAddress%>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-primary" href="/updateview/<%=user._id %>"
+                                        role="button">Update</a>
+                                    <a class="btn btn-danger" href="/deletecontacts/<%=user._id %>"
+                                        role="button">Delete</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+    </body>
+
+</html>
