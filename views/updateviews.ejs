@@ -8,24 +8,25 @@
             <div class="logins_slider">
                 <div class="forms_slider">
                     <form method="POST">
-                        <input type="hidden" name="id" value="<%=findContact._id %>">
+                        <input type="hidden" name="id" value="<%=findContact._id %>" required>
                         <div class="form-group">
                             <label for="exampleInputEmail1"> Name</label>
                             <input name="contactName" style="margin-bottom:10px" type="contactName" class="form-control"
                                 id="exampleInputEmail1" aria-describedby="emailHelp"
-                                value="<%=findContact.contactName %>" placeholder="Enter name">
+                                value="<%=findContact.contactName %>" placeholder="Enter name" required>
 
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Contact Number</label>
                             <input name="contactNumber" type="contactNumber" class="form-control"
                                 id="exampleInputPassword1" value="<%=findContact.contactNumber %>"
-                                placeholder="contact Number">
+                                placeholder="contact Number" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Email Address</label>
                             <input name="emailAddress" type="emailAddress" class="form-control"
-                                id="exampleInputPassword1" value="<%=findContact.emailAddress %>" placeholder="Email">
+                                id="exampleInputPassword1" value="<%=findContact.emailAddress %>" placeholder="Email"
+                                required>
                         </div>
                         <button id='form_button' type="submit" class="btn btn-primary">Update</button>
 

@@ -28,6 +28,7 @@ exports.createUser = async (req, res, next) => {
         // updating the success to true after login
 
         if (userExists.length == 0) {
+
             res.redirect('/login')
         } else {
             const updatingSuccess = await User.findOneAndUpdate({

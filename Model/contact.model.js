@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const contactSchema = new mongoose.Schema({
     contactName: {
         type: String,
-        default: "Ali"
+        default: "Zunar"
     },
     contactNumber: {
         type: Number,
@@ -13,7 +13,7 @@ const contactSchema = new mongoose.Schema({
     },
     emailAddress: {
         type: String,
-        default: "Ali@gmail.com"
+        default: "Zunar@gmail.com"
 
     },
     createdAt: {

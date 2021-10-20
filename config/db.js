@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 
 const connectDB = async () => {
-    const conn = await mongoose.connect('mongodb+srv://jhon:passpass@cluster0.iv28m.mongodb.net/portfilio?retryWrites=true&w=majority', {
+    const conn = await mongoose.connect('mongodb+srv://portfolio:root@cluster0.loq8j.mongodb.net/portfolio?retryWrites=true&w=majority', {
         useNewUrlParser: true
     })
 

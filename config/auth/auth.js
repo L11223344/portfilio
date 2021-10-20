@@ -11,8 +11,6 @@ exports.checkUser = async (req, res, next) => {
             success: true
         })
 
-        console.log('check', userExists)
-
         if (userExists.length == 0) {
             res.redirect('/login')
         } else {

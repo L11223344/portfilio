@@ -2,8 +2,10 @@ var express = require('express');
 var router = express.Router();
 const { createUser } = require('../controllers/user.controller');
 const { createContact } = require('../controllers/contact.controller');
+const { checkUserSuccess } = require('../config/auth/login.middleware');
 const { checkUser } = require('../config/auth/auth');
 const contactModel = require('../Model/contact.model');
+const userModel = require('../Model/user')
 // route for the main page
 router.get('/', function (req, res, next) {
   res.render('home', {
@@ -33,26 +35,28 @@ router.post('/test', (req, res) => {
 
 router.post('/login', createUser)
 
-// router.post('/updatecontact/:id', function (req, res) {
-//   console.log('rrrrrrrrrrrrrrrrr', req.params.id)
-// })
+
 // route for the about page
-router.post('/contact', createContact)
-router.get('/about', checkUser, function (req, res, next) {
-  res.render('about', { title: "About Me", para: "WHO YOU ARE!", desc: "Iam a WordPress developer and designer whose portfolio emphasizes her focus on customized, responsive website designs.I build beautiful layouts in using html bootstrap and good use of backend knoledge using node js", name: "Lewis M" });
+router.post('/contact', checkUserSuccess, createContact)
+
+
+router.get('/about', async function (req, res, next) {
+  const data = await checkUserSuccess();
+  res.render('about', { title: "About Me", para: "WHO YOU ARE!", desc: "Iam a WordPress developer and designer whose portfolio emphasizes her focus on customized, responsive website designs.I build beautiful layouts in using html bootstrap and good use of backend knoledge using node js", name: "Lewis M", login: data });
 });
 
-// router.get('/updateview/:id', function (req, res, next) {
-//   res.render('updateviews')
-// })
 
 
 router.get('/deletecontacts/:id', async function (req, res) {
   const deletedContacts = await contactModel.findOneAndDelete(req.params.id);
-
   res.redirect('/bussiness')
 })
 
+router.get('/logout', async function (req, res) {
+  const deletedContacts = await userModel.remove({})
+  res.redirect('/home')
+
+})
 
 router.get('/updateview/:id', async function (req, res) {
   const findContact = await contactModel.findById(req.params.id);
@@ -81,18 +85,24 @@ router.get('/bussiness', checkUser, async function (req, res) {
 })
 
 // route for the project page
-router.get('/project', function (req, res, next) {
-  res.render('project', { title: "Project" });
+router.get('/project', async function (req, res, next) {
+  const data = await checkUserSuccess();
+  console.log('data', data)
+  await res.render('project', { title: "Project", login: data });
 });
 
 // route for the service page
-router.get('/service', function (req, res, next) {
-  res.render('service', { title: "Services" });
+router.get('/service', async function (req, res, next) {
+  const data = await checkUserSuccess();
+  console.log('data', data)
+  res.render('service', { title: "Services", login: data });
 });
 const result = ["FirstName,LastName,ContactNumber"]
 // route for the contact page
-router.get('/contact', function (req, res, next) {
-  res.render('contact', { title: "Contact", results: result });
+router.get('/contact', async function async(req, res, next) {
+  const data = await checkUserSuccess();
+  console.log('data', data)
+  res.render('contact', { title: "Contact", results: result, login: data });
 });
 
 router.get('/login', function (req, res, next) {
