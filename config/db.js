@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config()
 
 
-
-
+console.log('env', process.env.MONGODB_URI)
 
 const connectDB = async () => {
-    const conn = await mongoose.connect('mongodb+srv://portfolio:root@cluster0.loq8j.mongodb.net/portfolio?retryWrites=true&w=majority', {
+    const conn = await mongoose.connect(process.env.MONGODB_URI, {
         useNewUrlParser: true
     })
 
